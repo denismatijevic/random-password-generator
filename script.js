@@ -16,8 +16,13 @@ function writePassword() {
  var symbol = "`~!@#$%^&*()-_=+[]{}\|?/.,><";
  var password = "";
  
+function computeInside() {
+  console.log("Test")
+}
+
  // Password length
- var passwordLength = prompt ("How long would you like your password to be?");
+ var passwordLength = parseInt(prompt("How long would you like your password to be?"));
+ console.log(passwordLength)
  if (passwordLength > 7 && (passwordLength < 129)) {
  } else {alert ("Please choose a password length between 8 and 128 characters");
  };
@@ -25,19 +30,19 @@ function writePassword() {
  // Uppder case prompt
  var passwordUpper = confirm ("Would you like upper case letters in your password?");
  if (passwordUpper) {
-   computeInside(upper)
+   computeInside()
  };
  
  // Lower case prompt
  var passwordLower = confirm ("Would you like lower case letters in your password?");
- if (passwordUpper) {
-   computeInside(lower)
+ if (passwordUpper){
+   computeInside()
  };
  
  // Number prompt
  var passwordNumber = confirm ("Would you like numbers in your password?");
  if (passwordNumber) {
-   computeInside(number)
+   computeInside()
  };
  
  // Special character prompt
@@ -46,7 +51,11 @@ function writePassword() {
    computeInside(symbol)
  };
 
-for (var i = 0; i < passwordLenght; i++) { 
+ function generatePassword() {
+   console.log("run")
+ }
+
+for (var i = 0; i < passwordLength; i++) { 
   password = generatePassword + lower.charAt + upper.charAt + number.charAt + symbol.charAt(Math.floor(Math.random() * Math.floor(value.length -1)));
 } 
 document.getElementById("Password Generator").value = password;
