@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password = generatePassword().innterHtml;
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -14,10 +14,10 @@ function writePassword() {
  var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
  var number = "1234567890";
  var symbol = "`~!@#$%^&*()-_=+[]{}\|?/.,><";
- var password = "";
+ var generatePassword = "";
  
-function computeInside() {
-  console.log("Test")
+function generatePassword(lower, upper, number, symbol) {
+
 }
 
  // Password length
@@ -30,35 +30,31 @@ function computeInside() {
  // Uppder case prompt
  var passwordUpper = confirm ("Would you like upper case letters in your password?");
  if (passwordUpper) {
-   computeInside()
  };
  
  // Lower case prompt
  var passwordLower = confirm ("Would you like lower case letters in your password?");
  if (passwordUpper){
-   computeInside()
  };
  
  // Number prompt
  var passwordNumber = confirm ("Would you like numbers in your password?");
  if (passwordNumber) {
-   computeInside()
  };
  
  // Special character prompt
  var passwordSymbol = confirm ("Now make it super strong by adding some special characters.")
  if (passwordSymbol) {
-   computeInside(symbol)
  };
+
+//  for (var i = 0; i < passwordLength; i++) { 
+//   password = generatePassword + lower.charAt + upper.charAt + number.charAt + symbol.charAt(Math.floor(Math.random() * Math.floor(value.length -1)));
+//  }
+   
 
  function generatePassword() {
    console.log("run")
  }
-
-for (var i = 0; i < passwordLength; i++) { 
-  password = generatePassword + lower.charAt + upper.charAt + number.charAt + symbol.charAt(Math.floor(Math.random() * Math.floor(value.length -1)));
-} 
-document.getElementById("Password Generator").value = password;
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
