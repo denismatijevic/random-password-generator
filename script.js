@@ -5,9 +5,6 @@ var characters;
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
 }
 
 function getPasswordChoices() {
@@ -73,27 +70,8 @@ if (!possibleCharacters){
   return; 
 }
 console.log(options.passwordLength)
-// for (var i = 0; i < options.passwordLength; i++) {
 var result = getRandomNumber(possibleCharacters, options.passwordLength)
-// result = result + newCharacter;
-// }
 appendHtml(result)
-// 1. We need to amke array's
-// 2. Based on user prompt we need to get random varibles 
-// 3. REMEBER NUMBER they select
-// 4. Push random varibles into our password string on line 3
-
-
-// Write password to the #password input
-
-
-
-  // for (i = 0; i <= passwordLength; i++) {
-  //   passwordLength = password.length;
-  //   randomCharacter = Math.floor(Math.random() * passwordLength)
-  //   password = password + passwordLength[randomCharacter]
-  // }
-  //   return password;
 }
 
 function getRandomNumber(arr, passwordLength) {
