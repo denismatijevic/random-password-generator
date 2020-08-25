@@ -41,7 +41,7 @@ function getPasswordChoices() {
  return passwordOptions;
 }
 
- // We nned to make arrays of character options:
+ // Arrays of character options:
 function generatePassword() {
 let lower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 let upper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -88,6 +88,7 @@ function getRandomNumber(arr, passwordLength) {
   console.log(passwordResult)
   return passwordResult;
 }
+// shuffling the the arrays to make a truly random password
 function shuffle(arr) {
   var j, x, i;
   for (i = arr.length - 1; i > 0; i--) {
